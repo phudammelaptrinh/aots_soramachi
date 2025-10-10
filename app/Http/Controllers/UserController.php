@@ -71,7 +71,7 @@ class UserController extends Controller
             'role' => 'nullable|string',
         ]);
 
-        // Admin chỉ được sửa user role=user (không nâng quyền)
+        
         if (auth()->user()->role === 'admin') {
             $data['role'] = 'user';
         } else {
